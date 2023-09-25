@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+         background-image: url({% static 'ban.png' %});
+         background-repeat:no-repeat;
+         background-size:cover;
+    }
+
+</style>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <input type="text" name="username" value="{{a.username}}"><br>
+    <img src="{% static img %}" height="200px" width="200px">
+    <input type="file" name="file"><br>
+    <input type="submit">
+
+</form>
+</body>
+</html>

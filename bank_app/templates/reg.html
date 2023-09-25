@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+         background-image: url({% static 'money-saving-concept_52683-7986.jpg' %});
+         background-repeat:no-repeat;
+         background-size:cover;
+    }
+
+</style>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <h1 style="text-align: center; margin-top:60px; color:white; font-family:couriernew; ">Welcome new user</h1>
+    <div id="a">
+        <table align="center">
+            <tr>
+                <td><label>First Name</label></td>
+                <td><input type="text" name="firstname" placeholder="first name"></td>
+            </tr>
+            <tr>
+                <td><label>last Name</label></td>
+                <td><input type="text" name="lastname" placeholder="last name"></td>
+            </tr>
+            <tr>
+                <td><label>user Name</label></td>
+                <td><input type="text" name="username" placeholder="user name"></td>
+            </tr>
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="email" name="email" placeholder="email"></td>
+            </tr>
+            <tr>
+                <td><label>phone</label></td>
+                <td><input type="number" name="phone" placeholder="phone number"></td>
+            </tr>
+            <tr>
+                <td><label>image upload</label></td>
+                <td><input type="file" name="file" ></td>
+            </tr>
+            <tr>
+                <td><label>4 digit pin</label></td>
+                <td><input type="password" name="pin" value="4 digit pin"></td>
+            </tr>
+            <tr>
+                <td><label>re enter 4 digit pin</label></td>
+                <td><input type="password" name="pinn" value="re enter 4 digit pin"></td>
+            </tr>
+        </table>
+    </div>
+    <center><button type="submit">register</button></center>
+
+
+
+
+</form>
+</body>
+</html>

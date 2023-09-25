@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+         background-image: url({% static 'ban a.jpeg' %});
+         background-repeat:no-repeat;
+         background-size:cover;
+    }
+
+</style>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <h1 style="text-align: center; margin-top:60px;">Welcome new user</h1>
+    <div id="a">
+        <table align="center">
+            <tr>
+                <td><label>First Name</label></td>
+                <td><input type="text" name="firstname" value="{{a.firstname}}"></td>
+            </tr>
+            <tr>
+                <td><label>last Name</label></td>
+                <td><input type="text" name="lastname"value="{{a.lastname}}"></td>
+            </tr>
+
+            <tr>
+                <td><label>Email</label></td>
+                <td><input type="email" name="email" value="{{a.email}}"></td>
+            </tr>
+            <tr>
+                <td><label>phone</label></td>
+                <td><input type="number" name="phone" value="{{a.phone}}"></td>
+            </tr>
+
+        </table>
+    </div>
+    <center><button type="submit">submit details</button></center>
+
+
+
+
+</form>
+</body>
+</html>

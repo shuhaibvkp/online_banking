@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+    body{
+         background-image: url({% static 'digital-rupee-concept-background-with-rupee-symbol_1017-36812.jpg' %});
+         background-repeat:no-repeat;
+         background-size:cover;
+    }
+
+</style>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" >{% csrf_token %}
+    <input type="password" name="pin"><br><br>
+    <input type="password" name="repin"><br><br>
+    <input type="submit">
+</form>
+</body>
+</html>

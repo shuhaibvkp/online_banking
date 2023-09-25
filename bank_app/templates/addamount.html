@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    body{
+         background-image: url({% static 'digital-rupee-concept-background-with-rupee-symbol_1017-36812.jpg' %});
+         background-repeat:no-repeat;
+         background-size:cover;
+    }
+
+</style>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+    <h1 style="text-align: center; margin-top:60px;">Welcome new user</h1>
+    <div id="a">
+        <table align="center">
+            <tr>
+                <td><label>Add amount</label></td>
+                <td><input type="number" name="balance" value="{{a.balance}}"></td>
+            </tr>
+             <tr>
+            <td><label>digit</label></td>
+            <td><input type="number" name="pin" placeholder=" 4 digit pin" ></td>
+             </tr>
+
+
+        </table>
+    </div>
+    <center><button type="submit">add amount</button></center>
+
+
+
+
+</form>
+</body>
+</html>
